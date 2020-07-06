@@ -1,0 +1,16 @@
+diff --git a/src/Gui/SyntaxHighlighter.cpp b/src/Gui/SyntaxHighlighter.cpp
+index 9d12741..11830e6 100644
+--- a/src/Gui/SyntaxHighlighter.cpp
++++ b/src/Gui/SyntaxHighlighter.cpp
+@@ -34,7 +34,11 @@ class SyntaxHighlighterP
+ public:
+     SyntaxHighlighterP()
+     {
++#ifdef BG_DARK
++		cNormalText.setRgb(255, 255, 255); cComment.setRgb(0, 170, 0);
++#else
+         cNormalText.setRgb(0, 0, 0); cComment.setRgb(0, 170, 0);
++#endif
+         cBlockcomment.setRgb(160, 160, 164); cLiteral.setRgb(255, 0, 0);
+         cNumber.setRgb(0, 0, 255); cOperator.setRgb(160, 160, 164);
+         cKeyword.setRgb(0, 0, 255); cClassName.setRgb(255, 170, 0);
