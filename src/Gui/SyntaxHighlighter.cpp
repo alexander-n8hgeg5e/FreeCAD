@@ -34,7 +34,11 @@ class SyntaxHighlighterP
 public:
     SyntaxHighlighterP()
     {
+#ifdef BG_DARK
+        cNormalText.setRgb(255, 255, 255); cComment.setRgb(0, 170, 0);
+#else
         cNormalText.setRgb(0, 0, 0); cComment.setRgb(0, 170, 0);
+#endif
         cBlockcomment.setRgb(160, 160, 164); cLiteral.setRgb(255, 0, 0);
         cNumber.setRgb(0, 0, 255); cOperator.setRgb(160, 160, 164);
         cKeyword.setRgb(0, 0, 255); cClassName.setRgb(255, 170, 0);
