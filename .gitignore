@@ -42,3 +42,6 @@ tags
 
 # crowdin file
 src/Tools/freecad.zip
+cscope.in.out
+cscope.out
+cscope.po.out
